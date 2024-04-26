@@ -30,5 +30,10 @@ namespace TP08.Controllers
             };
             return View(produits);
         }
+
+        public ActionResult Edit(int id)
+        {
+            return Content("id "+id);
+        }   
     }
 }
