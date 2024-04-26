@@ -1,0 +1,7 @@
+﻿@model IEnumerable<TP08.Models.Product>
+@foreach (var item in Model)
+{
+	<h3>@item.Name</h3>
+	<p><span style="color:dimgrey">ID: </span> @item.Id</p>
+	<p><span style="color:dimgrey">Price: </span>@item.Price</p>
+}
