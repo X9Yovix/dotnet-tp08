@@ -1,0 +1,21 @@
+﻿@model TP08.VM.ViewModel
+
+<h1>Product</h1>
+<p>Id: @Model.Product.Id</p>
+<p>Name: @Model.Product.Name</p>
+
+<h1>Clients</h1>
+<ul>
+	@foreach (var client in Model.Clients)
+	{
+		<li>Id: @client.Id</li>
+		<li>Name: @client.Name</li>
+	}
+</ul>
+
+
+<hr />
+<form asp-controller="Mvvm" asp-action="DetailClient" method="get">
+	<input type="text" id="clientId" name="id" placeholder="Enter Client Id">
+	<button type="submit">Find Client</button>
+</form>
